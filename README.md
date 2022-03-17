@@ -19,12 +19,29 @@ import Multiselection from 'multiselection'
 import 'multiselection/dist/index.css'
 
 class Example extends Component {
+  state = {
+    text: ["Create 😄", "React 😄", "Library 😄", "Example 😄"],
+    result: []
+  }
+  handleValue = (result) => {
+    this.setState({result})
+  }
   render() {
-    return <Multiselection
-      width={}
-      data={}
-      handleValue={}
-    />
+    const {text, retour} = this.state;
+    return (
+    <>
+      <Multiselection
+        width={400}
+        data={text}
+        handleValue={this.handleValu}
+      />
+      <ul>
+         <h4>Selected element</h4>
+             {result.map(item => 
+                <li key={item}>{item}</li>
+             )}
+      </ul>
+    </>
   }
 }
 ```
