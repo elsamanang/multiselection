@@ -5,13 +5,22 @@ import 'bootstrap/dist/js/bootstrap.js';
 import PropTypes from 'prop-types';
 
 class MultiSelection extends Component {
-  
+
   state = {
     show: "",
     selected: [],
     cle: 0,
     data: this.props.data,
     search: this.props.data
+  }
+
+  handleDrop = () => {
+    const {show} = this.state;
+    if(show == "") {
+      this.setState({show:"show"})
+    } else {
+      this.setState({show:""})
+    }
   }
 }
 
