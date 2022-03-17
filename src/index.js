@@ -30,6 +30,14 @@ class MultiSelection extends Component {
     this.setState({show:""});
     this.props.handleValue(filtre);
   }
+
+  handleSearch = e => {
+    let elm = e.target.value;
+    const {data} = this.state;
+    let filtre = data.filter((item, index) => (item.search(elm) >= 0));
+    this.setState({search: filtre});
+ }
+ 
 }
 
 MultiSelection.propTypes = {
