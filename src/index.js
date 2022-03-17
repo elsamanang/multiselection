@@ -4,6 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import PropTypes from 'prop-types';
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+class MultiSelection extends Component {
+
 }
+
+MultiSelectInput.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.string).isRequired,
+  handleValue: PropTypes.func.isRequired,
+  width: PropTypes.number,
+}
+
+export default MultiSelectInput;
