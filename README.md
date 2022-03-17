@@ -29,7 +29,9 @@ class Example extends Component {
 }
 ```
 > data : is a mandatory prop typeof list of string
+
 > handleValue : is a mandatory prop typeof func for retrieving the result of the select
+
 > width : is a optional prop typeof number
 ## License
 
