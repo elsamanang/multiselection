@@ -15,12 +15,16 @@ npm install --save multiselection
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'multiselection'
+import Multiselection from 'multiselection'
 import 'multiselection/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Multiselection
+      width={}
+      data={}
+      handleValue={}
+    />
   }
 }
 ```
