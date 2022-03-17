@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save multiselection
+npm install --save multiselection-input
 ```
 
 ## Usage
