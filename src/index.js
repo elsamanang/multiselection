@@ -22,12 +22,20 @@ class MultiSelection extends Component {
       this.setState({show:""})
     }
   }
+
+  handleDelete = (value) => {
+    const {selected} = this.state;
+    let filtre = selected.filter((item, index) => (item !== value));
+    this.setState({selected: filtre});
+    this.setState({show:""});
+    this.props.handleValue(filtre);
+  }
 }
 
-MultiSelectInput.propTypes = {
+MultiSelection.propTypes = {
   data: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleValue: PropTypes.func.isRequired,
   width: PropTypes.number,
 }
 
-export default MultiSelectInput;
+export default MultiSelection;
