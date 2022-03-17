@@ -1,4 +1,4 @@
-# multiselection
+# multiselection-input
 
 > make multiple selection in the selectbox
 
