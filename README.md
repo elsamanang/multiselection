@@ -1,4 +1,4 @@
-# multiselection
+# multiselection-input
 
 > make multiple selection in the selectbox
 
@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save multiselection
+npm install --save multiselection-input
 ```
 
 ## Usage
@@ -15,16 +15,41 @@ npm install --save multiselection
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'multiselection'
+import Multiselection from 'multiselection'
 import 'multiselection/dist/index.css'
 
 class Example extends Component {
+  state = {
+    text: ["Create 😄", "React 😄", "Library 😄", "Example 😄"],
+    result: []
+  }
+  handleValue = (result) => {
+    this.setState({result})
+  }
   render() {
-    return <MyComponent />
+    const {text, retour} = this.state;
+    return (
+    <>
+      <Multiselection
+        width={400}
+        data={text}
+        handleValue={this.handleValu}
+      />
+      <ul>
+         <h4>Selected element</h4>
+             {result.map(item => 
+                <li key={item}>{item}</li>
+             )}
+      </ul>
+    </>
   }
 }
 ```
+> data : is a mandatory prop typeof list of string
 
+> handleValue : is a mandatory prop typeof func for retrieving the result of the select
+
+> width : is a optional prop typeof number
 ## License
 
 MIT © [elsamanang](https://github.com/elsamanang)
