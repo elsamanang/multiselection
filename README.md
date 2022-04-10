@@ -33,7 +33,9 @@ class Example extends Component {
       <Multiselection
         width={400}
         data={text}
-        handleValue={this.handleValu}
+        handleValue={this.handleValue}
+        border={'solid 2px red'} 
+        margin={'15%'}
       />
       <ul>
          <h4>Selected element</h4>
@@ -50,6 +52,9 @@ class Example extends Component {
 > handleValue : is a mandatory prop typeof func for retrieving the result of the select
 
 > width : is a optional prop typeof number
+> border : is a optional prop typeof string for border style
+> margin : is a optional prop typeof string for margin of the select
+
 ## License
 
 MIT © [elsamanang](https://github.com/elsamanang)
