@@ -18,12 +18,12 @@ class App extends Component {
   }
 
   render() {
-    const {text, retour, retour1} = this.state;
+    const {text, retour} = this.state;
     return (
       <>
         <div className='container row'>
-          <div className='col-6 m-5'>
-            <MultiSelection width={400} data={text} handleValue={this.handleValue} border={'solid 2px red'} />
+          <div className='col-12'>
+            <MultiSelection width={400} data={text} handleValue={this.handleValue} border={'solid 2px red'} margin={'15%'}/>
             <ul>
               <h4>Result of selection </h4>
               { retour.map(item => 
