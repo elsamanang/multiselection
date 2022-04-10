@@ -53,6 +53,7 @@ class MultiSelection extends Component {
 
   render() {
     const {show, selected, search} = this.state;
+    const {border} = this.props;
     let affiche = [];
     let row = this.props.width == 'undefined' || this.props.width == undefined? 300: this.props.width;
     const calcul = (row*10)%12 > 0 ? ~~((row*10)/12) + 2: ((row*10)/12)+1;
@@ -62,7 +63,7 @@ class MultiSelection extends Component {
     }
 
     return (
-      <div className={styles.row+ ' row'} style={{width: row+'px'}}>
+      <div className={styles.row+ ' row'} style={{width: row+'px', border: border}}>
         <div className='col-md-10 '>
           {selected.map(item =>
             <button key={item} type="button" className="btn btn-light m-1">
@@ -92,6 +93,7 @@ MultiSelection.propTypes = {
   data: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleValue: PropTypes.func.isRequired,
   width: PropTypes.number,
+  border: PropTypes.string,
 }
 
 export default MultiSelection;
